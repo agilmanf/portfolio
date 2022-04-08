@@ -3,20 +3,20 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   background: rgba(41, 41, 41, 1);
   position: relative;
 }
 
 .background-container {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   position: absolute;
   overflow: hidden;
 }
 
 .background {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-image: url("./img/background.jpg");
   background-size: cover;
@@ -26,7 +26,6 @@ body {
 }
 
 header {
-  width: 100vw;
   height: 100vh;
   background: rgb(252, 252, 252);
   background: linear-gradient(
@@ -38,9 +37,22 @@ header {
 }
 
 nav h2 {
-  font-family: "Ubuntu", sans-serif;
-  letter-spacing: 1px;
-  font-weight: bold;
+  font-family: "Grand Hotel", sans-serif;
+}
+
+ul li a {
+  position: relative;
+}
+
+ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 h1 span.stroke {

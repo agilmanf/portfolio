@@ -10,48 +10,116 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;1,700&family=Ubuntu:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Open+Sans:ital,wght@0,300;0,400;1,700&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"
+    ></script>
     <script src="script.js" defer></script>
 
     <link rel="stylesheet" href="style.css" />
 
     <title>Hi, I'm Gilman | Web Developer</title>
   </head>
-  <body class="text-slate-50 overflow-x-hidden">
+  <body class="text-slate-50 2xl:text-xl">
     <div class="background-container">
       <div class="background"></div>
     </div>
-    <header id="intro" class="shadow-lg">
-      <nav class="h-10 w-100 flex justify-between mx-16 pt-6">
-        <h2 class="text-xl cursor-pointer">agilman</h2>
-        <ul class="flex gap-10">
-          <li><a href="#intro">Intro</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#work">My Work</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+    <header id="intro" class="relative shadow-lg px-7 lg:px-14 2xl:px-24">
+      <nav
+        class="flex pt-6 2xl:pt-12 justify-between absolute px-7 lg:px-14 2xl:px-24 left-0 right-0 top-0"
+      >
+        <h2 class="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl cursor-pointer">
+          agilman
+        </h2>
+        <div>
+          <div class="space-y-1 border p-2 lg:hidden">
+            <span class="block w-5 h-0.5 bg-white"></span>
+            <span class="block w-5 h-0.5 bg-white"></span>
+            <span class="block w-5 h-0.5 bg-white"></span>
+          </div>
+          <ul class="lg:flex gap-10 hidden">
+            <li>
+              <a
+                class="after:origin-left hover:after:scale-100 font-bold"
+                href="#intro"
+                >Intro</a
+              >
+            </li>
+            <li>
+              <a
+                class="after:origin-left after:scale-x-0 hover:after:scale-100"
+                href="#about"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="after:origin-left after:scale-x-0 hover:after:scale-100"
+                href="#work"
+                >My Work</a
+              >
+            </li>
+            <li>
+              <a
+                class="after:origin-left after:scale-x-0 hover:after:scale-100"
+                href="#contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
       </nav>
-      <section class="flex h-[92vh]">
-        <div class="my-6 flex flex-1 ml-16 flex-col justify-end">
-          <div class="icon-container inline-flex gap-3 flex-col text-sm">
+
+      <section
+        class="flex flex-col lg:flex-row-reverse justify-between h-screen"
+      >
+        <div class="my-auto xl:w-3/5 lg:text-left text-center">
+          <h1 class="xl:text-8xl 2xl:text-9xl sm:text-7xl text-[45px]">
+            <span class="stroke">Gilman</span>
+            <span class="font-bold inline-block md:text-right">Firdaus</span>
+          </h1>
+          <h4 class="md:pl-3 md:mt-1 -mt-2 md:text-2xl 2xl:text-3xl text-l">
+            I'm a FullStack Javascript Developer
+          </h4>
+          <a
+            class="border p-2 mt-4 inline-block lg:ml-3 hover:scale-95 transition-all 2xl:p-4"
+            href="https://drive.google.com/file/d/1TgTgEZiqZPeFvdG170edmTkopNVq3YQj/view?usp=sharing"
+            target="_blank"
+            >Download CV</a
+          >
+        </div>
+
+        <div
+          class="flex flex-row justify-center lg:flex-1 lg:flex-col lg:justify-end pb-7 2xl:pb-12"
+        >
+          <div
+            class="icon-container inline-flex gap-3 lg:flex-col text-sm 2xl:text-xl"
+          >
             <a
               class="inline-flex self-start gap-2 items-center group"
               href="https://github.com/agilmanf"
-              ><ion-icon size="large" name="logo-github"></ion-icon>
+              ><ion-icon
+                class="text-3xl 2xl:text-5xl"
+                name="logo-github"
+              ></ion-icon>
               <span
-                class="origin-left inline-block w-0 scale-x-0 group-hover:scale-x-100 transition-all"
+                class="origin-left md:inline-block w-0 scale-x-0 group-hover:scale-x-100 transition-all hidden"
                 >Github</span
               >
             </a>
             <a
               class="self-start inline-flex gap-2 items-center group"
               href="https://www.linkedin.com/in/agilmanf/"
-              ><ion-icon size="large" name="logo-linkedin"></ion-icon
+              ><ion-icon
+                class="text-3xl 2xl:text-5xl"
+                name="logo-linkedin"
+              ></ion-icon
               ><span
-                class="origin-left inline-block w-0 scale-x-0 group-hover:scale-x-100 transition-all"
+                class="origin-left md:inline-block w-0 scale-x-0 group-hover:scale-x-100 transition-all hidden"
                 >LinkedIn</span
               ></a
             >
@@ -59,35 +127,29 @@
               class="self-start inline-flex gap-2 items-center group"
               href="https://wa.me/+6281356160318"
             >
-              <ion-icon size="large" name="logo-whatsapp"></ion-icon>
+              <ion-icon
+                class="text-3xl 2xl:text-5xl"
+                name="logo-whatsapp"
+              ></ion-icon>
               <span
-                class="origin-left inline-block w-0 scale-x-0 group-hover:scale-x-100 transition-all"
+                class="origin-left md:inline-block w-0 scale-x-0 group-hover:scale-x-100 transition-all hidden"
                 >Whatsapp</span
               ></a
             >
             <a
               class="self-start inline-flex gap-2 items-center group"
               href="mailto:agilmanf@gmail.com"
-              ><ion-icon size="large" name="mail"></ion-icon
+              ><ion-icon class="text-3xl 2xl:text-5xl" name="mail"></ion-icon
               ><span
-                class="origin-left inline-block w-0 scale-x-0 group-hover:scale-x-100 transition-all"
+                class="origin-left md:inline-block w-0 scale-x-0 group-hover:scale-x-100 transition-all hidden"
                 >Email</span
               ></a
             >
           </div>
         </div>
-        <div class="my-auto w-2/4">
-          <h1 class="text-7xl">
-            <span class="stroke">Gilman</span>
-            <span class="font-bold text-right">Firdaus</span>
-          </h1>
-          <h4 class="pl-3 mt-2 text-xl">
-            I'm a FullStack Javascript Developer
-          </h4>
-        </div>
       </section>
     </header>
-    <main class="mx-16 my-10">
+    <main class="px-16 my-10">
       <section id="about" class="min-h-screen">About</section>
     </main>
   </body>
