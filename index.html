@@ -13,6 +13,10 @@
       href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Open+Sans:ital,wght@0,300;0,400;1,700&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
 
     <script
       type="module"
@@ -28,9 +32,9 @@
     <div class="background-container">
       <div class="background"></div>
     </div>
-    <header id="intro" class="relative shadow-lg px-7 lg:px-14 2xl:px-24">
+    <header id="intro" class="relative shadow-lg px-7 lg:px-10 2xl:px-20">
       <nav
-        class="flex pt-6 2xl:pt-12 justify-between absolute px-7 lg:px-14 2xl:px-24 left-0 right-0 top-0"
+        class="flex pt-6 2xl:pt-12 justify-between absolute px-7 lg:px-10 2xl:px-20 left-0 right-0 top-0"
       >
         <h2 class="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl cursor-pointer">
           agilman
@@ -60,7 +64,7 @@
               <a
                 class="after:origin-left after:scale-x-0 hover:after:scale-100"
                 href="#work"
-                >My Work</a
+                >My Projects</a
               >
             </li>
             <li>
@@ -77,8 +81,8 @@
       <section
         class="flex flex-col lg:flex-row-reverse justify-between h-screen"
       >
-        <div class="my-auto xl:w-3/5 lg:text-left text-center">
-          <h1 class="xl:text-8xl 2xl:text-9xl sm:text-7xl text-[45px]">
+        <div class="my-auto xl:w-[55%] lg:text-left text-center">
+          <h1 class="xl:text-[84px] 2xl:text-[116px] sm:text-7xl text-[45px]">
             <span class="stroke">Gilman</span>
             <span class="font-bold inline-block md:text-right">Firdaus</span>
           </h1>
@@ -149,8 +153,210 @@
         </div>
       </section>
     </header>
-    <main class="px-16 my-10">
-      <section id="about" class="min-h-screen">About</section>
+
+    <main
+      id="about"
+      class="py-7 w-full min-h-screen relative lg:px-20 md:py-19 lg:py-12 container m-auto"
+    >
+      <div class="w-full flex justify-center">
+        <h1 class="title text-[28px] lg:text-3xl font-bold inline-block">
+          ABOUT
+        </h1>
+      </div>
+      <div
+        class="about-me mt-8 lg:mt-16 flex flex-wrap justify-center lg:justify-around gap-x-3 md:gap-x-16 lg:gap-x-0 gap-y-10"
+      >
+        <div
+          class="about-box w-2/5 md:w-2/6 lg:w-1/5 flex flex-col items-center drop-shadow-2xl"
+        >
+          <div class="about-icon w-24 h-24 flex">
+            <ion-icon class="text-6xl m-auto" name="help-circle"></ion-icon>
+          </div>
+          <h4 class="text-lg lg:text-2xl font-bold pt-3 lg:pb-2">Curious</h4>
+          <p class="text-center text-xs md:text-sm">
+            Many things excite my interest, and I'm constantly eager to learn
+            new technology.
+          </p>
+        </div>
+
+        <div
+          class="about-box w-2/5 md:w-2/6 lg:w-1/5 flex flex-col items-center drop-shadow-2xl"
+        >
+          <div class="about-icon w-24 h-24 flex">
+            <ion-icon class="text-5xl m-auto" name="flash-outline"></ion-icon>
+          </div>
+          <h4 class="text-lg lg:text-2xl font-bold pt-3 lg:pb-2">Fast Learn</h4>
+          <p class="text-center text-xs md:text-sm">
+            I'm a quick learner who is used to being self-taught.
+          </p>
+        </div>
+
+        <div
+          class="about-box w-2/5 md:w-2/6 lg:w-1/5 flex flex-col items-center drop-shadow-2xl"
+        >
+          <div class="about-icon w-24 h-24 flex">
+            <ion-icon class="text-[42px] m-auto" name="bug"></ion-icon>
+          </div>
+          <h4 class="text-lg lg:text-2xl font-bold pt-3 lg:pb-2">
+            Problem Solver
+          </h4>
+          <p class="text-center text-xs md:text-sm">
+            Able to identify issues, tracking down errors, and resolving them.
+          </p>
+        </div>
+
+        <div
+          class="about-box w-2/5 md:w-2/6 lg:w-1/5 flex flex-col items-center drop-shadow-2xl"
+        >
+          <div class="about-icon w-24 h-24 flex">
+            <ion-icon class="text-5xl m-auto" name="time"></ion-icon>
+          </div>
+          <h4 class="text-lg lg:text-2xl font-bold pt-3 lg:pb-2">
+            Time Control
+          </h4>
+          <p class="text-center text-xs md:text-sm">
+            Good at time management and also can plan my tasks so that I can
+            complete it before the deadline.
+          </p>
+        </div>
+      </div>
+
+      <section
+        class="flex flex-wrap gap-y-5 gap-x-8 mt-10 lg:mt-20 px-6 justify-around"
+      >
+        <aside class="lg:w-1/3 flex flex-col items-center">
+          <div class="my-img-container drop-shadow-xl items-center">
+            <div class="my-img w-40 h-40 lg:w-52 lg:h-52"></div>
+          </div>
+          <h2 class="text-2xl mt-4 my-1 font-bold">Who's this guy?</h2>
+          <p class="text-xs md:text-base text-center">
+            I am a student at
+            <a class="text-orange-400" href="https://www.impactbyte.com/"
+              >Impactbyte Bootcamp</a
+            >
+            and a person who is very passionate about computer science. And have
+            been learning to be a web developer for about a year. I am also very
+            interested in design.
+          </p>
+        </aside>
+        <article class="w-full lg:w-1/2 flex flex-col">
+          <h2
+            class="text-xl xl:text-2xl font-bold text-center lg:text-left mb-3"
+          >
+            Skill & Tools
+          </h2>
+          <div
+            class="text-gray-800 font-bold md:flex flex-wrap gap-5 justify-center"
+          >
+            <div
+              class="skill-card bg-white px-3 lg:p-6 py-4 md:w-1/4 lg:w-full lg:text-xl shadow-lg"
+            >
+              <h4 class="pb-5 lg:pb-3 text-center lg:text-left">Frontend</h4>
+              <div
+                class="sklill-icon flex flex-wrap justify-center lg:justify-start gap-3"
+              >
+                <img
+                  class="w-8 lg:w-11"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                />
+
+                <img
+                  class="w-8 lg:w-11"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                />
+
+                <img
+                  class="w-8 lg:w-11"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                />
+
+                <img
+                  class="w-8 lg:w-11"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+                />
+                <img
+                  class="w-8 lg:w-11"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                />
+                <img
+                  class="w-8 lg:w-11"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                />
+                <img
+                  class="w-8 lg:w-11"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
+                />
+              </div>
+            </div>
+
+            <div
+              class="skill-card bg-white px-3 lg:p-6 py-4 md:w-1/4 lg:w-full lg:text-xl shadow-lg"
+            >
+              <h4 class="pb-5 lg:pb-3 text-center lg:text-left">Backend</h4>
+              <div
+                class="sklill-icon flex flex-wrap justify-center lg:justify-start gap-3"
+              >
+                <img
+                  class="w-11 lg:w-14"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"
+                />
+                <img
+                  class="w-11 lg:w-14"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg"
+                />
+
+                <img
+                  class="w-11 lg:w-14"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"
+                />
+                <img
+                  class="w-11 lg:w-14"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg"
+                />
+                <img
+                  class="w-11 lg:w-14"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg"
+                />
+              </div>
+            </div>
+
+            <div
+              class="skill-card bg-white px-3 lg:p-6 py-4 md:w-1/4 lg:w-full lg:text-xl shadow-lg"
+            >
+              <h4 class="pb-5 lg:pb-3 text-center lg:text-left">Tools</h4>
+              <div
+                class="sklill-icon flex flex-wrap justify-center lg:justify-start gap-3"
+              >
+                <img
+                  class="w-8 lg:w-11"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
+                />
+
+                <img
+                  class="w-8 lg:w-11"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                />
+                <img
+                  class="w-8 lg:w-11"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg"
+                />
+                <img
+                  class="w-8 lg:w-11"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                />
+                <img
+                  class="w-8 lg:w-11"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg"
+                />
+                <img
+                  class="w-8 lg:w-11"
+                  src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
+                />
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
     </main>
   </body>
 </html>

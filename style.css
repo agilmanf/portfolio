@@ -65,3 +65,39 @@ main {
   position: absolute;
   z-index: 10;
 }
+
+.title {
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  display: inline-block;
+  background-color: aliceblue;
+  width: 100px;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
+
+.about-icon {
+  background: rgb(231, 202, 132);
+  background: linear-gradient(
+    142deg,
+    rgba(231, 202, 132, 1) 0%,
+    rgba(224, 178, 116, 1) 40%,
+    rgba(125, 116, 92, 1) 90%
+  );
+}
+
+.about-icon {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.my-img {
+  background-image: url("./img/me.jpg");
+  background-size: contain;
+  background-position: 0 10px;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
