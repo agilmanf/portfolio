@@ -154,9 +154,10 @@
       </section>
     </header>
 
+    <!-- ABOUT SECTION //////////////////////////////////////////////////////////////// -->
     <main
       id="about"
-      class="py-7 w-full min-h-screen relative lg:px-20 md:py-19 lg:py-12 container m-auto"
+      class="py-7 w-full relative lg:px-20 md:py-19 lg:py-12 container m-auto"
     >
       <div class="w-full flex justify-center">
         <h1 class="title text-[28px] lg:text-3xl font-bold inline-block">
@@ -358,60 +359,96 @@
         </article>
       </section>
     </main>
+
+    <!-- PROJECTS SECTION //////////////////////////////////////////////////////////////// -->
     <section
       id="projects"
-      class="py-7 px-6 m-auto min-h-screen relative md:px-10 lg:px-20"
+      class="py-7 px-6 m-auto relative md:px-10 lg:px-20 lg:py-10 pb-14 lg:pb-28"
     >
-      <div class="w-full flex justify-center mb-12">
+      <div class="w-full flex justify-center mb-12 lg:mb-16">
         <h1 class="title text-[28px] lg:text-3xl font-bold inline-block">
           PROJECTS
         </h1>
       </div>
-      <div class="project-container lg:h-[400px] relative">
-        <div class="project-section relative lg:h-full">
+      <div
+        class="project-container container m-auto relative w-full grid lg:grid-cols-3 md:grid-cols-2 auto-rows-min gap-5"
+      >
+        <div
+          class="project-card bg-cover bg-no-repeat group overflow-hidden relative cursor-default shadow-2xl"
+        >
           <div
-            class="project-image-container w-full h-full absolute lg:static lg:w-2/3"
+            class="bg-cover bg-no-repeat h-full group-hover:scale-125 group-hover:opacity-0 transition-all ease-out duration-1000"
+            style="background-image: url(./img/Thumbnail-Melodico.jpg)"
+          ></div>
+          <div
+            class="absolute top-0 left-0 w-full opacity-0 group-hover:opacity-100 transition-all ease-out duration-500 h-full group-hover:bg-zinc-800 flex flex-col items-center justify-center gap-5 px-5 text-xs xl:text-base"
           >
-            <div
-              class="project-image h-full bg-cover bg-no-repeat lg:bg-cover lg:bg-slate-900 lg:backdrop-brightness-50"
-              style="background-image: url('./img/haku.jpg')"
-            ></div>
+            <p class="text-center">
+              <span class="text-orange-400">Music Streaming WebApp</span>. Situs
+              yang menyediakan layanan music streaming yang bisa diakses secara
+              gratis.
+            </p>
+            <a
+              href="#"
+              class="p-2 border xl:text-sm hover:bg-white hover:text-stone-800 transition-all"
+              >Learn More</a
+            >
           </div>
+        </div>
+
+        <div
+          class="project-card bg-cover bg-no-repeat group overflow-hidden relative cursor-default shadow-2xl"
+        >
           <div
-            class="project-card top-0 right-0 p-5 bg-[#272626]/95 relative md:px-10 md:py-12 h-full lg:absolute lg:w-1/3 lg:p-5"
+            class="bg-cover bg-no-repeat h-full group-hover:scale-125 group-hover:opacity-0 transition-all ease-out duration-1000"
+            style="background-image: url(./img/Thumbnail-Haku-Library.jpg)"
+          ></div>
+          <div
+            class="absolute top-0 left-0 w-full opacity-0 group-hover:opacity-100 transition-all ease-out duration-500 h-full group-hover:bg-zinc-800 flex flex-col items-center justify-center gap-5 px-5 text-xs xl:text-base"
           >
-            <div class="project-title">
-              <h3 class="text-xl font-bold md:text-2xl">Melodico</h3>
-              <h5 class="text-sm md:text-base text-orange-400">
-                Music Streaming WebApp
-              </h5>
-            </div>
-            <p class="text-sm text-stone-100 md:text-base my-6">
-              Merupakan sebuah situs yang menyediakan layanan music streaming
-              yang bisa diakses secara gratis. Saya juga membuat backend-nya
-              yang berfungsi untuk mengelola data artis, lagu, user dan
-              lain-lain.
+            <p class="text-center">
+              <span class="text-orange-400">Online Library</span>. Website
+              membaca e-book secara gratis dengan berbagai macam pilihan buku.
+              Dan sudah terintegrasi dengan Google Books.
             </p>
-            <p
-              class="project-tech text-sm md:text-base font-mono text-orange-100"
+            <a
+              href="#"
+              class="p-2 border xl:text-sm hover:bg-white hover:text-stone-800 transition-all"
+              >Learn More</a
             >
-              React.js Express MongoDB Bootstrap Amazon-S3 Heroku
+          </div>
+        </div>
+
+        <div
+          class="project-card bg-cover bg-no-repeat group overflow-hidden relative cursor-default shadow-2xl"
+        >
+          <div
+            class="bg-cover bg-no-repeat h-full group-hover:scale-125 group-hover:opacity-0 transition-all ease-out duration-1000"
+            style="background-image: url(./img/Thumbnail-Pasar-Ikan.jpg)"
+          ></div>
+          <div
+            class="absolute top-0 left-0 w-full opacity-0 group-hover:opacity-100 transition-all ease-out duration-500 h-full group-hover:bg-zinc-800 flex flex-col items-center justify-center gap-5 px-5 text-xs xl:text-base"
+          >
+            <p class="text-center">
+              <span class="text-orange-400">A Simple eCommerce</span>. Toko
+              online yang menyediakan berbagai macam ikan dan seafood.
             </p>
-            <div
-              class="project-view mt-5 flex justify-end gap-2 text-2xl md:text-3xl md:gap-3 text-slate-100"
+            <a
+              href="#"
+              class="p-2 border xl:text-sm hover:bg-white hover:text-stone-800 transition-all"
+              >Learn More</a
             >
-              <a
-                href="https://github.com/High-Haku/frontend-final-project-kelompok-1"
-                target="_blank"
-                ><ion-icon name="logo-github"></ion-icon
-              ></a>
-              <a href="https://melodico.netlify.app/" target="_blank"
-                ><ion-icon name="open-outline"></ion-icon
-              ></a>
-            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <div class="contact-edge">
+      <div class="h-full"></div>
+    </div>
+
+    <!-- CONTACT SECTION //////////////////////////////////////////////////////////////// -->
+    <!-- clip-path: polygon(50% 100%, 0 0, 100% 0); -->
+    <footer id="contact" class="min-h-screen">Contact</footer>
   </body>
 </html>
