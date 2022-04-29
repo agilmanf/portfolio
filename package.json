@@ -1,0 +1,23 @@
+{
+  "name": "native",
+  "version": "1.0.0",
+  "description": "Under Construction",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agilmanf/portofolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agilmanf/portofolio/issues"
+  },
+  "homepage": "https://github.com/agilmanf/portofolio#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.24"
+  }
+}

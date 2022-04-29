@@ -107,10 +107,6 @@ main {
   box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.164);
 }
 
-.project-card {
-  aspect-ratio: 3/2;
-}
-
 .contact-edge {
   clip-path: polygon(50% 100%, 47% 0, 53% 0);
   height: 30px;
