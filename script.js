@@ -29,3 +29,6 @@ header.addEventListener("mousemove", (e) => {
   transform += `translate(${translateX}px, ${translateY}px)`;
   el.style.transform = transform;
 });
+
+// AOS ///////////////////////////////////
+AOS.init({ duration: 1200, once: true });
