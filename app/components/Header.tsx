@@ -1,5 +1,9 @@
 import { useState } from "react";
 
+import ContactItem from "~/components/header/ContactItem";
+
+import { contacts } from "~/data";
+
 export default function Header() {
   const [bgTransform, setBgTransform] = useState("");
 
@@ -38,7 +42,7 @@ export default function Header() {
 
       <header
         id="landing"
-        className="relative shadow-lg px-7 lg:px-10 2xl:px-20"
+        className="relative shadow-lg px-7 lg:px-10 2xl:px-20 text-white"
         onMouseMove={handleMouseMove}
       >
         <nav className="flex pt-6 2xl:pt-12 justify-between absolute px-7 lg:px-10 2xl:px-20 left-0 right-0 top-0">
@@ -102,8 +106,8 @@ export default function Header() {
                 Firdaus
               </span>
             </h1>
-            <h4 className="md:pl-3 md:mt-1 -mt-2 md:text-2xl 2xl:text-3xl text-l">
-              I'm a FullStack Javascript Developer
+            <h4 className="md:pl-3 sm:mt-1 -mt-2 sm:text-2xl 2xl:text-3xl text-l">
+              I'm a FullStack Web Developer
             </h4>
             <a
               className="border p-2 mt-4 inline-block lg:ml-3 hover:scale-95 transition-all 2xl:p-4"
@@ -116,65 +120,15 @@ export default function Header() {
 
           <div className="flex flex-row justify-center lg:flex-1 lg:flex-col lg:justify-end pb-7 2xl:pb-12">
             <div className="icon-container inline-flex gap-3 lg:flex-col text-sm 2xl:text-xl">
-              <a
-                className="inline-flex self-start gap-2 items-center group"
-                href="https://github.com/agilmanf"
-                data-aos="fade-right"
-                data-aos-offset="-300"
-              >
-                {/* <ion-icon
-                className="text-3xl 2xl:text-5xl"
-                name="logo-github"
-              ></ion-icon> */}
-                <span className="origin-left md:inline-block w-0 scale-x-0 group-hover:scale-x-100 transition-all hidden">
-                  Github
-                </span>
-              </a>
-              <a
-                className="self-start inline-flex gap-2 items-center group"
-                href="https://www.linkedin.com/in/agilmanf/"
-                data-aos="fade-right"
-                data-aos-delay="150"
-                data-aos-offset="-300"
-              >
-                {/* <ion-icon
-                className="text-3xl 2xl:text-5xl"
-                name="logo-linkedin"
-              ></ion-icon> */}
-                <span className="origin-left md:inline-block w-0 scale-x-0 group-hover:scale-x-100 transition-all hidden">
-                  LinkedIn
-                </span>
-              </a>
-              <a
-                className="self-start inline-flex gap-2 items-center group"
-                href="https://wa.me/+6281356160318"
-                data-aos="fade-right"
-                data-aos-delay="300"
-                data-aos-offset="-300"
-              >
-                {/* <ion-icon
-                className="text-3xl 2xl:text-5xl"
-                name="logo-whatsapp"
-              ></ion-icon> */}
-                <span className="origin-left md:inline-block w-0 scale-x-0 group-hover:scale-x-100 transition-all hidden">
-                  Whatsapp
-                </span>
-              </a>
-              <a
-                className="self-start inline-flex gap-2 items-center group"
-                href="mailto:agilmanf@gmail.com"
-                data-aos="fade-right"
-                data-aos-delay="450"
-                data-aos-offset="-300"
-              >
-                {/* <ion-icon
-                className="text-3xl 2xl:text-5xl"
-                name="mail"
-              ></ion-icon> */}
-                <span className="origin-left md:inline-block w-0 scale-x-0 group-hover:scale-x-100 transition-all hidden">
-                  Email
-                </span>
-              </a>
+              {contacts.map((contact, index) => (
+                <ContactItem
+                  key={index}
+                  title={contact.title}
+                  icon={contact.icon}
+                  href={contact.href}
+                  {...contact.aos}
+                />
+              ))}
             </div>
           </div>
         </section>
