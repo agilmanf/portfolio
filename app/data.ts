@@ -1,3 +1,34 @@
+export const navigations = [
+  {
+    title: "Intro",
+    href: "#intro",
+    aos: {
+      "data-aos-delay": 0,
+    },
+  },
+  {
+    title: "About",
+    href: "#about",
+    aos: {
+      "data-aos-delay": 150,
+    },
+  },
+  {
+    title: "My Projects",
+    href: "#projects",
+    aos: {
+      "data-aos-delay": 300,
+    },
+  },
+  {
+    title: "Contact",
+    href: "#contact",
+    aos: {
+      "data-aos-delay": 450,
+    },
+  },
+];
+
 export const contacts = [
   {
     title: "Github",

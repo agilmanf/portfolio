@@ -1,11 +1,10 @@
-import { useState } from "react";
+import { Suspense, lazy, useState } from "react";
 
-import ContactItem from "~/components/header/ContactItem";
-
-import { contacts } from "~/data";
+import Contacts from "~/components/header/Contacts";
+import Navigation from "~/components/header/Navigation";
 
 export default function Header() {
-  const [bgTransform, setBgTransform] = useState("");
+  const [bgTransform, setBgTransform] = useState<string | null>(null);
 
   const handleMouseMove = (event: React.MouseEvent<HTMLElement>) => {
     let transform = "";
@@ -37,7 +36,10 @@ export default function Header() {
   return (
     <>
       <div className="background-container">
-        <div className="background" style={{ transform: bgTransform }} />
+        <div
+          className="background"
+          {...(bgTransform && { style: { transform: bgTransform } })}
+        />
       </div>
 
       <header
@@ -45,55 +47,7 @@ export default function Header() {
         className="relative shadow-lg px-7 lg:px-10 2xl:px-20 text-white"
         onMouseMove={handleMouseMove}
       >
-        <nav className="flex pt-6 2xl:pt-12 justify-between absolute px-7 lg:px-10 2xl:px-20 left-0 right-0 top-0">
-          <h2
-            className="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl cursor-pointer font-grandhotel"
-            data-aos="fade-down"
-          >
-            agilman
-          </h2>
-          <div>
-            <div className="space-y-1 border p-2 lg:hidden">
-              <span className="block w-5 h-0.5 bg-white"></span>
-              <span className="block w-5 h-0.5 bg-white"></span>
-              <span className="block w-5 h-0.5 bg-white"></span>
-            </div>
-            <ul className="lg:flex gap-10 hidden">
-              <li data-aos="fade-down" data-aos-delay="0">
-                <a
-                  className="after:origin-left hover:after:scale-100 font-bold"
-                  href="#intro"
-                >
-                  Intro
-                </a>
-              </li>
-              <li data-aos="fade-down" data-aos-delay="150">
-                <a
-                  className="after:origin-left after:scale-x-0 hover:after:scale-100"
-                  href="#about"
-                >
-                  About
-                </a>
-              </li>
-              <li data-aos="fade-down" data-aos-delay="300">
-                <a
-                  className="after:origin-left after:scale-x-0 hover:after:scale-100"
-                  href="#projects"
-                >
-                  My Projects
-                </a>
-              </li>
-              <li data-aos="fade-down" data-aos-delay="450">
-                <a
-                  className="after:origin-left after:scale-x-0 hover:after:scale-100"
-                  href="#contact"
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        <Navigation />
 
         <section className="flex flex-col lg:flex-row-reverse justify-between h-screen">
           <div
@@ -118,19 +72,7 @@ export default function Header() {
             </a>
           </div>
 
-          <div className="flex flex-row justify-center lg:flex-1 lg:flex-col lg:justify-end pb-7 2xl:pb-12">
-            <div className="icon-container inline-flex gap-3 lg:flex-col text-sm 2xl:text-xl">
-              {contacts.map((contact, index) => (
-                <ContactItem
-                  key={index}
-                  title={contact.title}
-                  icon={contact.icon}
-                  href={contact.href}
-                  {...contact.aos}
-                />
-              ))}
-            </div>
-          </div>
+          <Contacts />
         </section>
       </header>
     </>
