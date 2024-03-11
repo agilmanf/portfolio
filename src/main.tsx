@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
+import AOSWrapper from "./components/AOSWrapper.tsx";
 import Home from "./pages/Home.tsx";
 
 import "./style/index.css";
@@ -16,6 +17,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AOSWrapper>
+      <RouterProvider router={router} />
+    </AOSWrapper>
   </React.StrictMode>
 );
