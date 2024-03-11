@@ -1,5 +1,5 @@
-import Maintenance from "./Maintenance";
-import Header from "../components/Header";
+import Maintenance from "src/pages/Maintenance";
+import Header from "src/components/Header";
 
 export default function Home() {
   if (import.meta.env.VITE_MAINTENANCE_MODE != false) {

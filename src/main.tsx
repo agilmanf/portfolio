@@ -4,6 +4,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import AOSWrapper from "./components/AOSWrapper.tsx";
 import Home from "./pages/Home.tsx";
+import NotFound from "./pages/NotFound.tsx";
 
 import "./style/index.css";
 import "./style/tailwind.css";
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
 
