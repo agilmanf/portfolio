@@ -60,3 +60,46 @@
     @apply text-foreground;
   }
 }
+
+@layer components {
+  .project-card {
+    @apply aspect-[3/2] bg-cover bg-no-repeat overflow-hidden relative cursor-default shadow-2xl;
+  }
+
+  .project-card-background {
+    @apply bg-cover bg-no-repeat h-full transition-all ease-out duration-1000 group-hover:scale-125 group-hover:opacity-0;
+  }
+
+  .project-card-content {
+    @apply absolute top-0 left-0 w-full opacity-0  transition-all ease-out duration-500 h-full  flex flex-col items-center justify-center gap-5 px-5 text-xs xl:text-base group-hover:opacity-100 group-hover:bg-zinc-800;
+  }
+
+  .modal-bg {
+    @apply bg-white/75 w-full h-screen fixed flex top-0 left-0 z-10 invisible opacity-0 target:visible target:opacity-100 transition-all duration-300 ease-out;
+  }
+
+  .modal {
+    @apply relative m-auto scale-0 w-[280px]  group-target:scale-100 transition-all duration-200 text-stone-700 shadow-xl p-3 flex flex-col bg-white md:flex-row md:w-[600px] md:max-h-[400px] md:justify-between  md:gap-5 md:p-5 h-auto lg:py-7 lg:max-h-full lg:w-3/4  xl:w-2/3 xl:p-8 xl:gap-6 2xl:p-12 2xl:gap-10;
+  }
+
+  .modal article {
+    @apply w-full h-full py-3 md:w-2/5 md:p-0;
+  }
+
+  .modal aside {
+    @apply w-full h-fit shadow-xl md:w-3/5;
+  }
+
+  .modal .close {
+    @apply text-white text-2xl px-2 bg-orange-400 absolute bottom-0 right-0 hover:rotate-180 2xl:text-3xl;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .tech-stack {
+    @apply text-[10px] flex flex-wrap gap-1 mt-3 lg:text-xs xl:text-sm 2xl:text-base;
+  }
+
+  .tech-stack li {
+    @apply bg-slate-100 p-1 rounded-sm;
+  }
+}

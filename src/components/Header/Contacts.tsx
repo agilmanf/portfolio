@@ -12,7 +12,7 @@ export default function Contacts() {
             title={contact.title}
             icon={contact.icon}
             href={contact.href}
-            {...contact.aos}
+            aos={contact.aos}
           />
         ))}
       </div>

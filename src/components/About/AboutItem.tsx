@@ -1,16 +1,11 @@
 import { cn } from "src/lib/helpers";
+import { About } from "src/types";
 
-type AboutItemProps = {
-  title: string;
-  description: string;
-  icon: string;
-};
-
-function AboutItem({ title, description, icon, ...props }: AboutItemProps) {
+function AboutItem({ title, description, icon, aos }: About) {
   return (
     <div
       className="about-box w-2/5 md:w-2/6 lg:w-1/5 flex flex-col items-center drop-shadow-2xl"
-      {...props}
+      {...aos}
     >
       <div className="about-icon w-24 h-24 flex">
         <i

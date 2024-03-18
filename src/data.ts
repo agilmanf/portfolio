@@ -1,4 +1,14 @@
-export const navigations = [
+import {
+  About,
+  Contact,
+  Navigation,
+  Project,
+  ProjectPlatform,
+  ProjectType,
+  Skills,
+} from "./types";
+
+export const navigations: Navigation[] = [
   {
     title: "Intro",
     href: "#intro",
@@ -29,7 +39,7 @@ export const navigations = [
   },
 ];
 
-export const contacts = [
+export const contacts: Contact[] = [
   {
     title: "Github",
     icon: "fi-brands-github",
@@ -71,7 +81,7 @@ export const contacts = [
   },
 ];
 
-export const abouts = [
+export const abouts: About[] = [
   {
     title: "Curious",
     description:
@@ -113,7 +123,7 @@ export const abouts = [
   },
 ];
 
-export const skills = {
+export const skills: Skills = {
   frontend: [
     "Typescript",
     "React",
@@ -137,3 +147,22 @@ export const skills = {
     "AWS S3, EC2, RDS",
   ],
 };
+
+export const projects: Project[] = [
+  {
+    title: "Melodico",
+    subTitle: "Music Streaming WebApp",
+    shortDescription:
+      "Situs yang menyediakan layanan music streaming yang bisa diakses secara gratis.",
+    description:
+      "Final project bootcamp yang saya buat menggunakan teknologi MERN STACK, mulai dari design web, membangun backend untuk mengelola dan upload data, hingga coding frontend-nya. Adapun lagu & gambar yang telah di upload saya simpan di Amazon S3.",
+    thumbnailUrl: "/images/projects/melodico/thumbnail.webp",
+    pictureUrl: "/images/projects/melodico/thumbnail.webp",
+    projectUrl: "https://melodico.netlify.app/login",
+    sourceUrl: "https://github.com/agilmanf/melodico",
+    year: 2002,
+    techs: ["React.js", "Bootstrap", "Express.js", "MongoDB", "Cloudinary"],
+    platforms: new Set([ProjectPlatform.WEB]),
+    type: ProjectType.DUMMY,
+  },
+];

@@ -4,16 +4,15 @@ import { usePopper } from "react-popper";
 import { Popover } from "@headlessui/react";
 
 import { navigations } from "src/data";
+import { Nav } from "src/types";
 import { cn } from "src/lib/helpers";
 
-type NavItemProps = {
-  title: string;
-  href: string;
+type NavItemProps = Nav & {
   isActive: boolean;
 };
 
-const NavItem = ({ title, href, isActive, ...props }: NavItemProps) => (
-  <li data-aos="fade-down" {...props}>
+const NavItem = ({ title, href, aos, isActive }: NavItemProps) => (
+  <li data-aos="fade-down" {...aos}>
     <a
       className={cn(
         "after:origin-left hover:after:scale-100 after:scale-x-0 font-bold",
@@ -88,9 +87,8 @@ export default function Navigation() {
               key={index}
               title={nav.title}
               href={nav.href}
+              aos={nav.aos}
               isActive={hash === nav.href}
-              // isActive={location.hash === nav.href || !location.hash}
-              {...nav.aos}
             />
           ))}
         </ul>

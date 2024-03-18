@@ -21,7 +21,7 @@ export default function About() {
             title={about.title}
             description={about.description}
             icon={about.icon}
-            {...about.aos}
+            aos={about.aos}
           />
         ))}
       </div>
