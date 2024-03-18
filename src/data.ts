@@ -70,3 +70,70 @@ export const contacts = [
     },
   },
 ];
+
+export const abouts = [
+  {
+    title: "Curious",
+    description:
+      "Many things excite my interest, and I'm constantly eager to learn new technology.",
+    icon: "fi-ss-interrogation",
+    aos: {
+      "data-aos": "flip-right",
+      "data-aos-delay": "0",
+    },
+  },
+  {
+    title: "Fast Learner",
+    description: "I'm a self-taught person who picks things up quickly.",
+    icon: "fi-ss-bolt",
+    aos: {
+      "data-aos": "flip-right",
+      "data-aos-delay": "150",
+    },
+  },
+  {
+    title: "Problem Solver",
+    description:
+      "Able to identify issues, track down errors, and resolve them.",
+    icon: "fi-ss-bug-slash",
+    aos: {
+      "data-aos": "flip-right",
+      "data-aos-delay": "300",
+    },
+  },
+  {
+    title: "Time Controller",
+    description:
+      "I can plan my projects and manage my time well enough to do them before the deadline.",
+    icon: "fi-ss-calendar-clock",
+    aos: {
+      "data-aos": "flip-right",
+      "data-aos-delay": "450",
+    },
+  },
+];
+
+export const skills = {
+  frontend: [
+    "Typescript",
+    "React",
+    "Next.js",
+    "Remix",
+    "Tailwind",
+    "Chakra UI",
+    "shadcn/ui",
+    "Flutter",
+  ],
+  backend: ["Node.js", "Golang", "PostgreSQL", "MongoDB", "GraphQL", "Redis"],
+  tools: ["VS Code", "Figma", "Postman", "DBeaver"],
+  others: [
+    "Linux",
+    "Git",
+    "Docker",
+    "Monorepo",
+    "VPS",
+    "Cloudflare",
+    "Midtrans",
+    "AWS S3, EC2, RDS",
+  ],
+};

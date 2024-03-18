@@ -96,7 +96,7 @@ main {
 }
 
 .my-img {
-  background-image: url("/public/images/me.jpg");
+  background-image: url("/images/me.jpg");
   background-size: contain;
   background-position: 0 10px;
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);

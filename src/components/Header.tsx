@@ -43,7 +43,7 @@ export default function Header() {
       </div>
 
       <header
-        id="landing"
+        id="intro"
         className="relative shadow-lg px-7 lg:px-10 2xl:px-20 text-white"
         onMouseMove={handleMouseMove}
       >
@@ -63,13 +63,13 @@ export default function Header() {
             <h4 className="md:pl-3 sm:mt-1 -mt-2 sm:text-2xl 2xl:text-3xl text-l">
               I'm a FullStack Web Developer
             </h4>
-            <a
+            {/* <a
               className="border p-2 mt-4 inline-block lg:ml-3 hover:scale-95 transition-all 2xl:p-4"
               href="https://drive.google.com/file/d/1IQjXQiwO9GS_nO1cxt6N9tWldDTOks1K/view?usp=sharing"
               target="_blank"
             >
               Curriculum Vitae
-            </a>
+            </a> */}
           </div>
 
           <Contacts />
