@@ -131,9 +131,9 @@ export const skills = {
     "Git",
     "Docker",
     "Monorepo",
-    "VPS",
     "Cloudflare",
     "Midtrans",
+    "VPS",
     "AWS S3, EC2, RDS",
   ],
 };

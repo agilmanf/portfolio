@@ -1,49 +1,7 @@
+import AboutItem from "src/components/About/AboutItem";
+import SkillCard from "src/components/About/SkillCard";
+
 import { abouts, skills } from "src/data";
-import { cn } from "src/lib/helpers";
-import { Badge } from "./ui/badge";
-
-type AboutItemProps = {
-  title: string;
-  description: string;
-  icon: string;
-};
-
-function AboutItem({ title, description, icon, ...props }: AboutItemProps) {
-  return (
-    <div
-      className="about-box w-2/5 md:w-2/6 lg:w-1/5 flex flex-col items-center drop-shadow-2xl"
-      {...props}
-    >
-      <div className="about-icon w-24 h-24 flex">
-        <i
-          className={cn(
-            "fi w-full text-4xl flex items-center justify-center",
-            icon
-          )}
-        />
-      </div>
-      <h4 className="text-lg lg:text-2xl font-bold pt-3 lg:pb-2">{title}</h4>
-      <p className="text-center text-xs md:text-sm">{description}</p>
-    </div>
-  );
-}
-
-function SkillCard({ title, skills }: { title: string; skills: string[] }) {
-  return (
-    <div className="relative skill-card px-3 lg:p-6 py-4 w-full lg:text-xl border border-stone-600">
-      <h4 className="absolute -top-3 md:-top-4 left-1/2 -translate-x-1/2 sm:left-4 sm:translate-x-0 bg-[#292929] px-2 pb-1 lg:pb-3 text-center lg:text-left text-stone-400">
-        {title}
-      </h4>
-      <div className="skill-icon flex flex-wrap justify-center lg:justify-start gap-3 lg:text-xs">
-        {skills.map((skill) => (
-          <Badge key={skill} variant="secondary" className="rounded-none">
-            {skill}
-          </Badge>
-        ))}
-      </div>
-    </div>
-  );
-}
 
 export default function About() {
   return (

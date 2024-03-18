@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import Contacts from "src/components/header/Contacts";
-import Navigation from "src/components/header/Navigation";
+import Contacts from "src/components/Header/Contacts";
+import Navigation from "src/components/Header/Navigation";
 
 export default function Header() {
   const [bgTransform, setBgTransform] = useState<string | null>(null);
