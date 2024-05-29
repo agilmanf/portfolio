@@ -1,5 +1,1 @@
-# My Portofolio
-
-https://agilman.netlify.app/
-
-Powered by Tailwind
+# Web Portfolio Created Using React + TypeScript + Vite + Tailwind
