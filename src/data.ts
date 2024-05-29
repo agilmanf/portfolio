@@ -1,14 +1,14 @@
 import {
   About,
   Contact,
-  Navigation,
+  Nav,
   Project,
   ProjectPlatform,
   ProjectType,
   Skills,
 } from "./types";
 
-export const navigations: Navigation[] = [
+export const navigations: Nav[] = [
   {
     title: "Intro",
     href: "#intro",
@@ -56,16 +56,6 @@ export const contacts: Contact[] = [
     aos: {
       "data-aos": "fade-right",
       "data-aos-delay": "150",
-      "data-aos-offset": "-300",
-    },
-  },
-  {
-    title: "Whatsapp",
-    icon: "fi-brands-whatsapp",
-    href: "https://wa.me/+6281356160318",
-    aos: {
-      "data-aos": "fade-right",
-      "data-aos-delay": "300",
       "data-aos-offset": "-300",
     },
   },
@@ -150,18 +140,69 @@ export const skills: Skills = {
 
 export const projects: Project[] = [
   {
+    id: "project-1",
     title: "Melodico",
     subTitle: "Music Streaming WebApp",
     shortDescription:
       "Situs yang menyediakan layanan music streaming yang bisa diakses secara gratis.",
     description:
       "Final project bootcamp yang saya buat menggunakan teknologi MERN STACK, mulai dari design web, membangun backend untuk mengelola dan upload data, hingga coding frontend-nya. Adapun lagu & gambar yang telah di upload saya simpan di Amazon S3.",
-    thumbnailUrl: "/images/projects/melodico/thumbnail.webp",
-    pictureUrl: "/images/projects/melodico/thumbnail.webp",
-    projectUrl: "https://melodico.netlify.app/login",
+    thumbnailUrl: "/images/projects/melodico/thumbnail.jpg",
+    pictureUrl: "/images/projects/melodico/preview.webp",
+    projectUrl: "https://melodico.netlify.app/",
     sourceUrl: "https://github.com/agilmanf/melodico",
-    year: 2002,
+    year: 2022,
     techs: ["React.js", "Bootstrap", "Express.js", "MongoDB", "Cloudinary"],
+    platforms: new Set([ProjectPlatform.WEB]),
+    type: ProjectType.DUMMY,
+  },
+  {
+    id: "project-2",
+    title: "Haku Library",
+    subTitle: "Online Library",
+    shortDescription:
+      "Website membaca e-book dengan berbagai macam pilihan buku.",
+    description:
+      "Project pertama yang saya buat menggunakan React.js. Sebuah website perpustakaan online yang menyediakan layanan membaca buku digital (e-book) secara gratis. Dengan menggunakan API Google Books, buku-buku yang ada di Haku Library cukup lengkap dan update.",
+    thumbnailUrl: "/images/projects/haku-library/thumbnail.jpg",
+    pictureUrl: "/images/projects/haku-library/preview.webp",
+    projectUrl: "https://haku-library.netlify.app/",
+    sourceUrl: "https://github.com/agilmanf/haku-library",
+    year: 2022,
+    techs: ["React.js", "Bootstrap", "Google Books API"],
+    platforms: new Set([ProjectPlatform.WEB]),
+    type: ProjectType.DUMMY,
+  },
+  {
+    id: "project-3",
+    title: "Pasar Ikan",
+    subTitle: "eCommerce",
+    shortDescription:
+      "Toko online yang menyediakan berbagai macam ikan dan seafood.",
+    description:
+      "Project pertama yang saya buat saat belajar Web Dev dan belajar cara menggunakan API. Dibuat hanya menggunakan Vanilla Javascipt & Bootstrap.",
+    thumbnailUrl: "/images/projects/pasar-ikan/thumbnail.jpg",
+    pictureUrl: "/images/projects/pasar-ikan/preview.webp",
+    projectUrl: "https://pasar-ikan.netlify.app/",
+    sourceUrl: "https://github.com/agilmanf/pasar-ikan",
+    year: 2022,
+    techs: ["React.js", "Bootstrap"],
+    platforms: new Set([ProjectPlatform.WEB]),
+    type: ProjectType.DUMMY,
+  },
+  {
+    id: "project-4",
+    title: "Game Gratis",
+    subTitle: "Free Games Portal",
+    shortDescription: "Kumpulan game gratis dan legal dari berbagai platform.",
+    description:
+      "Project yang saya buat untuk mempelajari teknologi Next.js dan Typescript. Didalamnya mengumpulkan informasi game - game gratis dan legal dari berbagai platform, seperti steam, epic games, ubisoft dan lain lain.",
+    thumbnailUrl: "/images/projects/game-gratis/thumbnail.jpg",
+    pictureUrl: "/images/projects/game-gratis/preview.webp",
+    projectUrl: "https://gamegratis.vercel.app/",
+    sourceUrl: "https://github.com/agilmanf/gamegratis",
+    year: 2022,
+    techs: ["Next.js", "Typescript", "Tailwind"],
     platforms: new Set([ProjectPlatform.WEB]),
     type: ProjectType.DUMMY,
   },

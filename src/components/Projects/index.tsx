@@ -1,3 +1,7 @@
+import { projects } from "src/data";
+
+import ProjectCard from "src/components/Projects/ProjectCard";
+
 export default function Projects() {
   return (
     <>
@@ -10,87 +14,14 @@ export default function Projects() {
             PROJECTS
           </h1>
         </div>
+
         <div className="project-container container m-auto relative w-full grid lg:grid-cols-3 md:grid-cols-2 auto-rows-min gap-5">
-          <div
-            className="project-card group"
-            data-aos="fade-up"
-            data-aos-delay="150"
-          >
-            <div
-              className="project-card-background"
-              style={{
-                backgroundImage:
-                  "url(./images/projects/Thumbnail-Haku-Library.jpg)",
-              }}
-            ></div>
-            <div className="project-card-content">
-              <p className="text-center">
-                <span className="text-orange-400">Online Library</span>. Website
-                membaca e-book dengan berbagai macam pilihan buku.
-              </p>
-              <a
-                href="#haku-library"
-                className="p-2 border xl:text-sm hover:bg-white hover:text-stone-800 transition-all"
-              >
-                Learn More
-              </a>
-            </div>
-          </div>
-
-          <div
-            className="project-card group"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div
-              className="project-card-background"
-              style={{
-                backgroundImage:
-                  "url(./images/projects/Thumbnail-Pasar-Ikan.jpg)",
-              }}
-            ></div>
-            <div className="project-card-content">
-              <p className="text-center">
-                <span className="text-orange-400">A Simple eCommerce</span>.
-                Toko online yang menyediakan berbagai macam ikan dan seafood.
-              </p>
-              <a
-                href="#pasar-ikan"
-                className="p-2 border xl:text-sm hover:bg-white hover:text-stone-800 transition-all"
-              >
-                Learn More
-              </a>
-            </div>
-          </div>
-
-          <div
-            className="project-card group"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div
-              className="project-card-background"
-              style={{
-                backgroundImage:
-                  "url(./images/projects/Thumbnail-Gamegratis.jpg)",
-              }}
-            ></div>
-            <div className="project-card-content">
-              <p className="text-center">
-                <span className="text-orange-400">Free Games Portal</span>.
-                Kumpulan game gratis dan legal dari berbagai platform.
-              </p>
-              <a
-                href="#gamegratis"
-                className="p-2 border xl:text-sm hover:bg-white hover:text-stone-800 transition-all"
-              >
-                Learn More
-              </a>
-            </div>
-          </div>
+          {projects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
         </div>
       </section>
-      <section className="modal-container">
+      {/* <section className="modal-container">
         <div id="melodico" className="modal-bg group">
           <div className="modal">
             <aside>
@@ -302,7 +233,7 @@ export default function Projects() {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

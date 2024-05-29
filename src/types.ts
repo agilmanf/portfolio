@@ -37,6 +37,7 @@ export enum ProjectPlatform {
 }
 
 export type Project = {
+  id: string;
   title: string;
   subTitle: string;
   shortDescription: string;
