@@ -1,6 +1,6 @@
 import ContactItem from "src/components/Header/ContactItem";
 
-import { contacts } from "src/data";
+import { contacts } from "src/lib/data";
 
 export default function Contacts() {
   return (

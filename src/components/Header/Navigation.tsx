@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { usePopper } from "react-popper";
 import { Popover } from "@headlessui/react";
 
-import { navigations } from "src/data";
+import { navigations } from "src/lib/data";
 import { Nav } from "src/types";
 import { cn } from "src/lib/helpers";
 
@@ -51,9 +51,6 @@ const PopoverNavigation = () => {
               <a href={nav.href}>{nav.title}</a>
             </li>
           ))}
-          <li>
-            <a href="#">asdasd</a>
-          </li>
         </ul>
       </Popover.Panel>
     </Popover>

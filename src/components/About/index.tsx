@@ -1,7 +1,7 @@
 import AboutItem from "src/components/About/AboutItem";
 import SkillCard from "src/components/About/SkillCard";
 
-import { abouts, skills } from "src/data";
+import { abouts, skills } from "src/lib/data";
 
 export default function About() {
   return (

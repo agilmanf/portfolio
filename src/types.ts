@@ -26,7 +26,7 @@ export type Skills = {
 };
 
 export enum ProjectType {
-  DUMMY,
+  EXPERIMENTAL,
   REAL,
 }
 
@@ -41,9 +41,9 @@ export type Project = {
   title: string;
   subTitle: string;
   shortDescription: string;
-  description: string;
+  description: React.ReactNode;
   thumbnailUrl: string | null;
-  pictureUrl: string;
+  imageUrls: string[];
   projectUrl: string | null;
   sourceUrl: string | null;
   year: number;

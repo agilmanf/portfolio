@@ -73,12 +73,4 @@
   .project-card-content {
     @apply absolute top-0 left-0 w-full opacity-0  transition-all ease-out duration-500 h-full  flex flex-col items-center justify-center gap-5 px-5 text-xs xl:text-base group-hover:opacity-100 group-hover:bg-zinc-800;
   }
-
-  .tech-stack {
-    @apply text-[10px] flex flex-wrap gap-1 mt-3 lg:text-xs xl:text-sm 2xl:text-base;
-  }
-
-  .tech-stack li {
-    @apply bg-slate-100 p-1 rounded-sm;
-  }
 }

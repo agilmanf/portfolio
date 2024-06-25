@@ -1,4 +1,4 @@
-import { contacts } from "src/data";
+import { contacts } from "src/lib/data";
 import { cn } from "src/lib/helpers";
 
 export default function Footer() {
@@ -46,7 +46,7 @@ export default function Footer() {
 
         <p className="text-xs opacity-75 font-mono">
           Designed & Created by{" "}
-          <span className="text-orange-400">Gilman Firdaus</span> &copy; 2022
+          <span className="text-orange-400">Gilman Firdaus</span> &copy; 2024
         </p>
       </footer>
     </>
