@@ -2,9 +2,11 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
+  DialogTitle,
   DialogTrigger,
 } from "src/components/ui/dialog";
 import { Project } from "src/types";
+import { ProjectCarousel } from "./ProjectCarousel";
 
 export default function ProjectDialog({ project }: { project: Project }) {
   return (
@@ -12,44 +14,64 @@ export default function ProjectDialog({ project }: { project: Project }) {
       <DialogTrigger className="p-2 border xl:text-sm hover:bg-white hover:text-stone-800 transition-all">
         Learn More
       </DialogTrigger>
-      <DialogContent className="flex w-full max-w-7xl p-8 gap-8">
-        <aside className="w-full">
-          <img className="object-cover w-full" src={project.pictureUrl}></img>
+      <DialogContent className="flex flex-col items-center w-full max-w-6xl max-h-[800px] overflow-x-hidden overflow-y-auto p-8 gap-8">
+        <DialogTitle asChild className="text-stone-700 text-center">
+          <div>
+            <h2 className="font-bold text-4xl">{project.title}</h2>
+            <h3 className="font-sans text-primary text-2xl font-normal">
+              {project.subTitle}
+            </h3>
+          </div>
+        </DialogTitle>
+
+        <aside className="w-full ">
+          <ProjectCarousel images={project.imageUrls} />
         </aside>
 
         <DialogDescription asChild>
-          <article className="w-full max-w-md">
-            <h3 className="font-bold text-stone-700 text-sm lg:text-xl xl:text-3xl 2xl:text-4xl">
-              {project.title} ({project.year})
-            </h3>
-            <h4 className="text-orange-400 text-xs lg:text-base xl:text-lg 2xl:text-2xl">
-              {project.subTitle}
-            </h4>
-            <p className="leading-2 max-h-28 mt-2 text-xs overflow-y-scroll pr-1 lg:max-h-full lg:overflow-auto lg:pr-0 lg:text-sm xl:text-base xl:my-3 2xl:text-lg 2xl:my-5">
+          <article className="w-full">
+            <h4 className="text-xl font-bold">Project Overview</h4>
+            <div className="mt-2 text-[16px] leading-relaxed space-y-4">
               {project.description}
-            </p>
+            </div>
 
-            <ul className="tech-stack">
+            <hr className="my-8" />
+
+            <h4 className="text-xl font-bold">Technologies</h4>
+            <ul className="flex flex-wrap gap-2 mt-2">
               {project.techs.map((tech, index) => (
-                <li key={index}>{tech}</li>
+                <li className="bg-stone-200 px-2 py-1" key={index}>
+                  {tech}
+                </li>
               ))}
             </ul>
 
-            <div className="mt-4 text-sm flex gap-2 xl:mt-6 2xl:text-lg">
-              <a
-                className="bg-stone-800 text-white rounded-sm p-2 shadow-md hover:scale-95 lg:px-4"
-                href="https://melodico.netlify.app/"
-                target="_blank"
-              >
-                Visit
-              </a>
-              <a
-                className="bg-stone-800 text-white rounded-sm p-2 shadow-md hover:scale-95 lg:px-4"
-                href="https://github.com/agilmanf/melodico"
-                target="_blank"
-              >
-                Source
-              </a>
+            <div className="flex flex-col lg:flex-row gap-8 mt-8 [&>*]:flex-1">
+              {project.projectUrl && (
+                <div>
+                  <h4 className="text-xl font-bold">Website</h4>
+                  <a
+                    className="block text-[16px] text-primary underline underline-offset-4 mt-1"
+                    href={project.projectUrl}
+                    target="_blank"
+                  >
+                    {project.projectUrl}
+                  </a>
+                </div>
+              )}
+
+              {project.sourceUrl && (
+                <div>
+                  <h4 className="text-xl font-bold">Source Code</h4>
+                  <a
+                    className="block text-[16px] text-primary underline underline-offset-4 mt-1"
+                    href={project.sourceUrl}
+                    target="_blank"
+                  >
+                    {project.sourceUrl}
+                  </a>
+                </div>
+              )}
             </div>
           </article>
         </DialogDescription>
