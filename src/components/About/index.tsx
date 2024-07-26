@@ -41,10 +41,10 @@ export default function About() {
             about design and{" "}
             <a
               className="text-orange-500"
-              href="https://skilvul.com"
+              href="https://bts.id/"
               target="_blank"
             >
-              currently working as a web developer at Skilvul
+              currently working as a frontend web developer at BTS.id
             </a>
             , where I love collaborating with my team to create innovative
             solutions.

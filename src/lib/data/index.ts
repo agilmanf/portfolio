@@ -111,6 +111,8 @@ export const skills: Skills = {
     "React",
     "Next.js",
     "Remix",
+    "Vue",
+    "Nuxt",
     "Tailwind",
     "Chakra UI",
     "shadcn/ui",
